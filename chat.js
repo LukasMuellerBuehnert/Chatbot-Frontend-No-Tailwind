@@ -54,6 +54,42 @@ function greetOnce() {
     chatBox.dataset.greeted = "1";
   }
 }
+
+function openChat(){ chatWin.classList.remove("cb-hidden"); greetOnce(); input.focus(); }
+function closeChat(){ chatWin.classList.add("cb-hidden"); }
+
+chatTgl.addEventListener("click", () =>
+  chatWin.classList.contains("cb-hidden") ? openChat() : closeChat()
+);
+chatClose.addEventListener("click", closeChat);
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const text = input.value.trim();
+  if (text) sendMessage(text);
+});
+
+// Start geöffnet (wie bisher)
+openChat();      body: JSON.stringify({ message: text })
+    });
+    const data = await res.json();
+    typing.remove();
+    addMessage(data.answer || "Fehler.", "bot");
+    if (data.debug) console.log("[DEBUG]", data.debug);
+  } catch {
+    typing.remove();
+    addMessage("Netzwerkfehler oder CORS blockiert.", "bot");
+  } finally {
+    input.disabled = false; sendBtn.disabled = false; input.focus();
+  }
+}
+
+function greetOnce() {
+  if (!chatBox.dataset.greeted) {
+    addMessage("Hi! Wie kann ich helfen?", "bot");
+    chatBox.dataset.greeted = "1";
+  }
+}
 function openChat(){ chatWin.classList.remove("cb-hidden"); greetOnce(); input.focus(); }
 function closeChat(){ chatWin.classList.add("cb-hidden"); }
 chatTgl.addEventListener("click", () => chatWin.classList.contains("cb-hidden") ? openChat() : closeChat());
