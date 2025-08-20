@@ -1,5 +1,5 @@
 //const API_URL = "https://chatbotbackend-v5bj.onrender.com/chat";
-const API_URL = "https://chatbot-java-script-backend.vercel.app/";
+const API_URL = "https://chatbot-java-script-backend.vercel.app/api/chat";
 
 const chatBox   = document.getElementById("chat");
 const form      = document.getElementById("form");
