@@ -1,4 +1,5 @@
-const API_URL = "https://chatbotbackend-v5bj.onrender.com/chat";
+//const API_URL = "https://chatbotbackend-v5bj.onrender.com/chat";
+const API_URL = "https://chatbot-java-script-backend.vercel.app/";
 
 const chatBox   = document.getElementById("chat");
 const form      = document.getElementById("form");
@@ -26,7 +27,7 @@ async function sendMessage(text) {
 
   const typing = document.createElement("div");
   typing.className = "cb-typing";
-  typing.textContent = "Bot tippt…";
+  typing.textContent = "Bot is typing…";
   chatBox.appendChild(typing);
   chatBox.scrollTop = chatBox.scrollHeight;
 
