@@ -12,11 +12,11 @@
   <button id="chatToggle" class="cb-fab" aria-label="Open/close chat" title="Open/close chat">💬</button>
 
   <!-- Floating Chat Window -->
-  <div id="chatWindow" class="cb-window cb-hidden" role="dialog" aria-label="Chatbot window">
+  <div id="chatWindow" class="cb-window cb-hidden" role="dialog" aria-label="Chatbot">
     <!-- Header -->
     <div class="cb-header">
-      <h2 class="cb-title">Lukas Demo Chatbot</h2>
-      <button id="chatClose" class="cb-close" aria-label="Close chat">✕</button>
+      <!-- Title removed -->
+      <button id="chatClose" class="cb-close" aria-label="Close">✕</button>
     </div>
 
     <!-- Chat area -->
@@ -24,11 +24,16 @@
 
     <!-- Composer -->
     <form id="form" class="cb-form">
-      <input id="msg" type="text" placeholder="Type your question…" class="cb-input" />
-      <button id="sendBtn" type="submit" class="cb-send">Send</button>
+      <input id="msg" type="text" placeholder="Type your message…" class="cb-input" />
+      <button id="sendBtn" type="submit" class="cb-send" aria-label="Send">
+        <!-- Paper plane icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/>
+        </svg>
+      </button>
     </form>
 
-    <p class="cb-hint">Ask me anything about the website, e.g. opening hours.</p>
+    <p class="cb-hint">Ask me anything about the website e.g. opening hours.</p>
   </div>
 
   <script src="chat.js"></script>
