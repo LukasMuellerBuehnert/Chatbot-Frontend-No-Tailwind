@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -9,14 +9,14 @@
 <body>
 
   <!-- Floating Toggle Button -->
-  <button id="chatToggle" class="cb-fab" aria-label="Chat öffnen/schließen" title="Chat öffnen/schließen">💬</button>
+  <button id="chatToggle" class="cb-fab" aria-label="Open/close chat" title="Open/close chat">💬</button>
 
   <!-- Floating Chat Window -->
-  <div id="chatWindow" class="cb-window cb-hidden" role="dialog" aria-label="Chatbot">
+  <div id="chatWindow" class="cb-window cb-hidden" role="dialog" aria-label="Chatbot window">
     <!-- Header -->
     <div class="cb-header">
       <h2 class="cb-title">Lukas Demo Chatbot</h2>
-      <button id="chatClose" class="cb-close" aria-label="Schließen">✕</button>
+      <button id="chatClose" class="cb-close" aria-label="Close chat">✕</button>
     </div>
 
     <!-- Chat area -->
@@ -24,11 +24,11 @@
 
     <!-- Composer -->
     <form id="form" class="cb-form">
-      <input id="msg" type="text" placeholder="Frage eingeben…" class="cb-input" />
-      <button id="sendBtn" type="submit" class="cb-send">Senden</button>
+      <input id="msg" type="text" placeholder="Type your question…" class="cb-input" />
+      <button id="sendBtn" type="submit" class="cb-send">Send</button>
     </form>
 
-    <p class="cb-hint">Ask me anything about the website e.g. opening hours.</p>
+    <p class="cb-hint">Ask me anything about the website, e.g. opening hours.</p>
   </div>
 
   <script src="chat.js"></script>
